@@ -12,7 +12,6 @@ run_analysis <- function() {
   ## 5.From the data set in step 4, creates a second, independent tidy data set with the 
   ## average of each variable for each activity and each subject.
   ##
- 
   ## Load libraries used
   library(data.table)
   library(plyr)
@@ -20,14 +19,14 @@ run_analysis <- function() {
   library(DataCombine)
   ##
   ## Point to files
-  setwd("C:/Users/uy7302/Documents/GitHub/March/Getting & Cleaning Data/Course_Project/UCI HAR Dataset")
-  data1 <- "~/GitHub/March/Getting & Cleaning Data/Course_Project/UCI HAR Dataset/features.txt"
-  data2 <- "~/GitHub/March/Getting & Cleaning Data/Course_Project/UCI HAR Dataset/train/y_train.txt"
-  data3 <- "~/GitHub/March/Getting & Cleaning Data/Course_Project/UCI HAR Dataset/train/subject_train.txt"
-  data4 <- "~/GitHub/March/Getting & Cleaning Data/Course_Project/UCI HAR Dataset/test/y_test.txt"
-  data5 <- "~/GitHub/March/Getting & Cleaning Data/Course_Project/UCI HAR Dataset/test/subject_test.txt"
-  data6 <- "~/GitHub/March/Getting & Cleaning Data/Course_Project/UCI HAR Dataset/train/X_train.txt"
-  data7 <- "~/GitHub/March/Getting & Cleaning Data/Course_Project/UCI HAR Dataset/test/X_test.txt"
+  setwd("C:/Users/uy7302/Documents/GitHub/March/Getting & Cleaning Data/Course-Project/GetData-Course-Project")
+  data1 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/features.txt"
+  data2 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/train/y_train.txt"
+  data3 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/train/subject_train.txt"
+  data4 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/test/y_test.txt"
+  data5 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/test/subject_test.txt"
+  data6 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/train/X_train.txt"
+  data7 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/test/X_test.txt"
   ##
   ## Load feature variables as a data frame & rename the variable names of the table
   featvardf <- tbl_df(fread(data1,header=FALSE))%>%
@@ -57,7 +56,7 @@ run_analysis <- function() {
   ## Remove duplicates since "dplyr" package "select" function throws an error with duplicates
   ## select only the columns containing "mean" & "std"
   removedups<-merged_data[,!duplicated(colnames(merged_data))]%>%
-    select(subjectlabel,activitylabel,contains("mean"),contains("std"))
+    select(subjectlabel,activitylabel,contains("Mean()"),contains("Std()"))
   ##
   ## Use descriptive names to name the activities in the dataset
   removedups$activitylabel[removedups$activitylabel==1] <- "WALKING"
@@ -69,19 +68,29 @@ run_analysis <- function() {
   ##
   ##
   ## Tidy up the variable names
-  removedups <- tolower(colnames(removedups))%>%
-    gsub("[a][A][c][C][c][C]","acceleration")%>%
-    gsub("[s][S][t][T][d][D]","stdeviation")%>%
-    gsub("-[x][X]","xaxis")%>%
-    gsub("-[y][Y]","yaxis")%>%
-    gsub("-[z][Z]","zaxis")%>%
-    gsub("\\(","")%>%
-    gsub("\\)","")%>%
-    gsub("-","")%>%
-    gsub("\\,","")
+  newcolnames <- tolower(colnames(removedups))
+  newcolnames <- gsub("acc","acceleration",newcolnames)
+  newcolnames <- gsub("std","stdeviation",newcolnames)
+  newcolnames <- gsub("-x","xaxis",newcolnames)
+  newcolnames <- gsub("-y","yaxis",newcolnames)
+  newcolnames <- gsub("-z","zaxis",newcolnames)
+  newcolnames <- gsub("\\(","",newcolnames)
+  newcolnames <- gsub("\\)","",newcolnames)
+  newcolnames <- gsub("-","",newcolnames)
+  newcolnames <- gsub(",","",newcolnames)
+  ##
+  ## Assign the new cleaned variables to the merged data
+  removedups <- setnames(removedups,newcolnames)
+  ##
+  ##
+  ## From the data set in step 4, create a second,
+  ## independent tidy data set with the average of 
+  ## each variable for each activity and each subject.
+  tidydatamean <- ddply(removedups,.(subjectlabel,activitylabel),numcolwise(mean))
+  ##
   ##
   ## View output
   View(removedups)
-  #View(tstdf1)
-  #View(trndf1)
+  View(newcolnames)
+  View(tidydatamean)
 }
