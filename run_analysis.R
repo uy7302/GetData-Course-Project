@@ -28,7 +28,7 @@ run_analysis <- function() {
   data6 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/train/X_train.txt"
   data7 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/test/X_test.txt"
   ##
-  ## Load feature variables as a data frame & rename the variable names of the table
+  ## Load feature variables as a data table & rename the variable names of the table
   featvardf <- tbl_df(fread(data1,header=FALSE))%>%
     rename(Index = V1, FeatureVariableNames = V2)
   ##
@@ -68,16 +68,20 @@ run_analysis <- function() {
   ##
   ##
   ## Tidy up the variable names
+  ## Per class notes it is preffered to remove all special characters
+  ## try to be as descriptive as possible
+  ## try to be lowercase
+  ## try to use universally accepted abbreviations where applicable
   newcolnames <- tolower(colnames(removedups))
-  newcolnames <- gsub("acc","acceleration",newcolnames)
-  newcolnames <- gsub("std","stdeviation",newcolnames)
-  newcolnames <- gsub("-x","xaxis",newcolnames)
-  newcolnames <- gsub("-y","yaxis",newcolnames)
-  newcolnames <- gsub("-z","zaxis",newcolnames)
+  newcolnames <- gsub("-x","x",newcolnames)
+  newcolnames <- gsub("-y","y",newcolnames)
+  newcolnames <- gsub("-z","z",newcolnames)
   newcolnames <- gsub("\\(","",newcolnames)
   newcolnames <- gsub("\\)","",newcolnames)
   newcolnames <- gsub("-","",newcolnames)
   newcolnames <- gsub(",","",newcolnames)
+  newcolnames <- gsub("^t","time",newcolnames)
+  newcolnames <- gsub("^f","freq",newcolnames)
   ##
   ## Assign the new cleaned variables to the merged data
   removedups <- setnames(removedups,newcolnames)
