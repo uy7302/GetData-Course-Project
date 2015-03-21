@@ -19,14 +19,13 @@ run_analysis <- function() {
   library(DataCombine)
   ##
   ## Point to files
-  setwd("C:/Users/uy7302/Documents/GitHub/March/Getting & Cleaning Data/Course-Project/GetData-Course-Project")
-  data1 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/features.txt"
-  data2 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/train/y_train.txt"
-  data3 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/train/subject_train.txt"
-  data4 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/test/y_test.txt"
-  data5 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/test/subject_test.txt"
-  data6 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/train/X_train.txt"
-  data7 <- "~/GitHub/March/Getting & Cleaning Data/UCI HAR Dataset/test/X_test.txt"
+  data1 <- "./UCI HAR Dataset/features.txt"
+  data2 <- "./UCI HAR Dataset/train/y_train.txt"
+  data3 <- "./UCI HAR Dataset/train/subject_train.txt"
+  data4 <- "./UCI HAR Dataset/test/y_test.txt"
+  data5 <- "./UCI HAR Dataset/test/subject_test.txt"
+  data6 <- "./UCI HAR Dataset/train/X_train.txt"
+  data7 <- "./UCI HAR Dataset/test/X_test.txt"
   ##
   ## Load feature variables as a data table & rename the variable names of the table
   featvardf <- tbl_df(fread(data1,header=FALSE))%>%
