@@ -21,7 +21,6 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 run_analysis.R
 uy7302
 Fri Mar 20 19:53:59 2015
-  ##
   ## Load libraries used
   ##
   ## Point to files
