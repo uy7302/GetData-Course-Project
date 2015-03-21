@@ -24,15 +24,15 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 #### 3. Load feature variables as a data table & rename the variable names of the table
 #### 4. Create a character vector for a total of 561 features variable names
 #### 5. Load activity label & subject data for training & testing datasets
-#### "cbind" activity lables & subject labels to training & testing sets
-#### "rbind" the training and testing sets & assign header names
-#### Remove duplicates since "dplyr" package "select" function throws an error with duplicates
-#### Select only the columns containing "mean" & "std"
-#### Use descriptive names for the activities in the dataset e.g. WALING, SITTING.... etc.
-#### Tidy the variable names
-#### Remove all special characters,try to be as descriptive as possible & convert to lowercase
-#### Also, try using universally accepted abbreviations where variable names becomes too large
-#### Assign the new cleaned variables to the merged data
-#### From the data set above, create a second independent tidy data set with the average of each variable
-#### This dataset needs to be grouped by "activitylabel" & "subjectid"
-#### Write the output to a text file.
+#### 6. "cbind" activity lables & subject labels to training & testing sets
+#### 7. "rbind" the training and testing sets & assign header names
+#### 8. Remove duplicates since "dplyr" package "select" function throws an error with duplicates
+#### 9. Select only the columns containing "mean" & "std"
+#### 10.Use descriptive names for the activities in the dataset e.g. WALING, SITTING.... etc.
+#### 11.Tidy the variable names
+#### 12.Remove all special characters,try to be as descriptive as possible & convert to lowercase
+#### 13.Also, try using universally accepted abbreviations where variable names becomes too large
+#### 14.Assign the new cleaned variables to the merged data
+#### 15.From the data set above, create a second independent tidy data set with the average of each variable
+#### 16.This dataset needs to be grouped by "activitylabel" & "subjectid"
+#### 17.Write the output to a text file.
