@@ -82,6 +82,7 @@ run_analysis <- function() {
   newcolnames <- gsub(",","",newcolnames)
   newcolnames <- gsub("^t","time",newcolnames)
   newcolnames <- gsub("^f","freq",newcolnames)
+  newcolnames <- gsub("bodybody","body",newcolnames)
   ##
   ## Assign the new cleaned variables to the merged data
   removedups <- setnames(removedups,newcolnames)
@@ -90,11 +91,12 @@ run_analysis <- function() {
   ## From the data set in step 4, create a second,
   ## independent tidy data set with the average of 
   ## each variable for each activity and each subject.
-  tidydatamean <- ddply(removedups,.(subjectlabel,activitylabel),numcolwise(mean))
+  tidydata <- tbl_df(ddply(removedups,.(subjectlabel,activitylabel),numcolwise(mean)))
+  write.table(tidydata,file="tidydataset.txt",row.names=FALSE)
   ##
   ##
   ## View output
-  View(removedups)
   View(newcolnames)
-  View(tidydatamean)
+  View(tidydata)
+  ##View(str(tidydata))
 }
