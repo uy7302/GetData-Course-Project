@@ -21,21 +21,18 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## run_analysis.R, uy7302, Fri Mar 20 19:53:59 2015
 #### Load libraries used
 #### Point to files
-### Load feature variables as a data table & rename the variable names of the table
-### Create a character vector for a total of 561 features variable names
-### Load activity label & subject data for training & testing datasets
-### cbind activity lables & subject labels to training & testing sets
-### rbind the training and testing sets & assign header names
-### Remove duplicates since "dplyr" package "select" function throws an error with duplicates
-### select only the columns containing "mean" & "std"
-### Use descriptive names to name the activities in the dataset
-### Tidy up the variable names
-### Per class notes it is preffered to remove all special characters
-### try to be as descriptive as possible
-### try to be lowercase
-### try to use universally accepted abbreviations where applicable
-### Assign the new cleaned variables to the merged data
-### From the data set above, create a second,
-### independent tidy data set with the average of 
-### each variable for each activity and each subject.
-### Write the output to a text file.
+#### Load feature variables as a data table & rename the variable names of the table
+#### Create a character vector for a total of 561 features variable names
+#### Load activity label & subject data for training & testing datasets
+#### "cbind" activity lables & subject labels to training & testing sets
+#### "rbind" the training and testing sets & assign header names
+#### Remove duplicates since "dplyr" package "select" function throws an error with duplicates
+#### Select only the columns containing "mean" & "std"
+#### Use descriptive names for the activities in the dataset e.g. WALING, SITTING.... etc.
+#### Tidy the variable names
+#### Remove all special characters,try to be as descriptive as possible & convert to lowercase
+#### Also, try using universally accepted abbreviations where variable names becomes too large
+#### Assign the new cleaned variables to the merged data
+#### From the data set above, create a second independent tidy data set with the average of each variable
+#### This dataset needs to be grouped by "activitylabel" & "subjectid"
+#### Write the output to a text file.
