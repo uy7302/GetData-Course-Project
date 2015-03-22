@@ -23,17 +23,18 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ##### 2.  Point to files. Data files used & the data contained therein explained below:
 features.txt: ALL feature variable names to be the header of the dataset.
 
-y_train.txt:
+y_train.txt: Activity labels for the training dataset in the order of how the experiment was performed such as standing -> sitting -> laying -> Waling etc. 
 
 subject_train.txt: Subject labels for the training dataset in the order of how the experiment was performed
 
-X_train.txt:
+X_train.txt: Training data for the 561 implied variables
 
-y_test.txt:
+y_test.txt: Activity labels for the test dataset in the order of how the experiment was performed such as standing -> sitting -> laying -> Waling etc. 
 
 subject_test.txt: Subject labels for the training dataset in the order of how the experiment was performed
 
-X_test.txt:
+X_test.txt:Testing data for the 561 implied variables
+
 ##### 3.  Load feature variables as a data table & rename the variable names of the table
 ##### 4.  Create a character vector for a total of 561 features variable names
 ##### 5.  Load activity label & subject data for training & testing datasets
