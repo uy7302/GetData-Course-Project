@@ -23,13 +23,13 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ##### 2.  Point to files. Data files used & the data contained therein explained below:
 features.txt: ALL feature variable names to be the header of the dataset.
 
-y_train.txt: Activity labels for the training dataset in the order of how the experiment was performed such as standing -> sitting -> laying -> Waling etc. 
+y_train.txt: Activity labels for the training dataset in the order of how the experiment was performed such as standing -> sitting -> laying -> walking etc. 
 
 subject_train.txt: Subject labels for the training dataset in the order of how the experiment was performed
 
 X_train.txt: Training data for the 561 implied variables
 
-y_test.txt: Activity labels for the test dataset in the order of how the experiment was performed such as standing -> sitting -> laying -> Waling etc. 
+y_test.txt: Activity labels for the test dataset in the order of how the experiment was performed such as standing -> sitting -> laying -> walking etc. 
 
 subject_test.txt: Subject labels for the training dataset in the order of how the experiment was performed
 
