@@ -1,6 +1,6 @@
 ### GetData-Course-Project, Coursera Course ID: getdata-012
 ###Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of  68 variables:
-* subjectlabel           : int  1 1 1 1 1 1 2 2 2 2 ...
++ subjectlabel           : int  1 1 1 1 1 1 2 2 2 2 ...
 - min:1 max: 30
 - Label for each individual on which the experiment was conducted. A total of 30 subjects were used.
 
