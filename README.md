@@ -21,17 +21,17 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## run_analysis.R, uy7302, Fri Mar 20 19:53:59 2015
 ##### 1.  Load libraries used
 ##### 2.  Point to files. Data files used & the data contained therein explained below:
-features.txt: ALL feature variable names to be the header of the dataset.
+features.txt: ALL feature variable names to be the header of the dataset. A total of 561 feature variables were initial provided.
 
 y_train.txt: Activity labels for the training dataset in the order of how the experiment was performed such as standing -> sitting -> laying -> walking etc. 
 
-subject_train.txt: Subject labels for the training dataset in the order of how the experiment was performed
+subject_train.txt: Subject labels for the training dataset in the order of how the experiment was performed such as Mr. John Doe would be subject # 1. A total of 30 subjects (people) were used for this experiment
 
 X_train.txt: Training data for the 561 implied variables
 
 y_test.txt: Activity labels for the test dataset in the order of how the experiment was performed such as standing -> sitting -> laying -> walking etc. 
 
-subject_test.txt: Subject labels for the training dataset in the order of how the experiment was performed
+subject_test.txt: Subject labels for the training dataset in the order of how the experiment was performed such as Mr. John Doe would be subject # 1. A total of 30 subjects (people) were used for this experiment
 
 X_test.txt:Testing data for the 561 implied variables
 
