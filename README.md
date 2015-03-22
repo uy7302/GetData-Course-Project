@@ -21,13 +21,13 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## run_analysis.R, uy7302, Fri Mar 20 19:53:59 2015
 ##### 1.  Load libraries used
 ##### 2.  Point to files. Data files used & the data contained therein explained below:
-features.txt"
-y_train.txt"
-subject_train.txt"
-y_test.txt"
-subject_test.txt"
-X_train.txt"
-X_test.txt"
+features.txt
+y_train.txt
+subject_train.txt
+X_train.txt
+y_test.txt
+subject_test.txt
+X_test.txt
 ##### 3.  Load feature variables as a data table & rename the variable names of the table
 ##### 4.  Create a character vector for a total of 561 features variable names
 ##### 5.  Load activity label & subject data for training & testing datasets
