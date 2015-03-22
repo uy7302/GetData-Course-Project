@@ -6,11 +6,11 @@
   
 1. activitylabel          : chr  "LAYING" "SITTING" "STANDING" "WALKING" ...
   - 1. WALKING
-  - 1. WALKING_UPSTAIRS
-  - 1. WALKING_DOWNSTAIRS
-  - 1. SITTING
-  - 1. STANDING
-  - 1. LAYING
+  - 2. WALKING_UPSTAIRS
+  - 3. WALKING_DOWNSTAIRS
+  - 4. SITTING
+  - 5. STANDING
+  - 6. LAYING
   - Lablel ID for each activity performed during the experiment by every subject
 1. timebodyaccmeanx       : num  0.222 0.261 0.279 0.277 0.289 ...
 1. timebodyaccmeany       : num  -0.04051 -0.00131 -0.01614 -0.01738 -0.00992 ...
