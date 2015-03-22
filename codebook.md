@@ -42,16 +42,21 @@
   - Units: meters/sec/sec
 1. timebodygyromeanx      : num  -0.0166 -0.0454 -0.024 -0.0418 -0.0351 ...
   - Mean of the body angular velocity for the gyro measurement in the X-Axis in the time domain.
+  - Units: rad/sec
 1. timebodygyromeany      : num  -0.0645 -0.0919 -0.0594 -0.0695 -0.0909 ...
   - Mean of the body angular velocity for the gyro measurement in the Y-Axis in the time domain.
 1. timebodygyromeanz      : num  0.1487 0.0629 0.0748 0.0849 0.0901 ...
   - Mean of the body angular velocity for the gyro measurement in the Z-Axis in the time domain.
+  - Units: rad/sec
 1. timebodygyrojerkmeanx  : num  -0.1073 -0.0937 -0.0996 -0.09 -0.074 ...
-  - Derived mean from the angular velocity component of the gyro measurement in the X-Axis in the time domain. 
+  - Derived mean from the angular velocity component of the gyro measurement in the X-Axis in the time domain.
+  - Units: rad/sec
 1. timebodygyrojerkmeany  : num  -0.0415 -0.0402 -0.0441 -0.0398 -0.044 ...
   - Derived mean from the angular velocity component of the gyro measurement in the Y-Axis in the time domain.
+  - Units: rad/sec
 1. timebodygyrojerkmeanz  : num  -0.0741 -0.0467 -0.049 -0.0461 -0.027 ...
   - Derived mean from the angular velocity component of the gyro measurement in the Z-Axis in the time domain.
+  - Units: rad/sec
 1. timebodyaccmagmean     : num  -0.8419 -0.9485 -0.9843 -0.137 0.0272 ...
   - Derived quantity (mean) from the "body acceleration jerk" component which in turn is the body acceleration component of the accelerometer measurement in the time domain.
   - Units: meters/sec/sec
@@ -63,11 +68,13 @@
   - Units: meters/sec/sec
 1. timebodygyromagmean    : num  -0.8748 -0.9309 -0.9765 -0.161 -0.0757 ...
   - Derived quantity (mean) from the "body gyro jerk mean" which in turn is the angular velocity component of the gyro measurement in the time domain.
+  - Units: rad/sec
 1. timebodygyrojerkmagmean: num  -0.963 -0.992 -0.995 -0.299 -0.295 ...
   - Derived quantity (mean) from the "body gyro jerk mean" which in turn is the angular velocity component of the gyro measurement in the time domain.
+  - Units: rad/sec
 1. freqbodyaccmeanx       : num  -0.9391 -0.9796 -0.9952 -0.2028 0.0382 ...
   - Mean of the body acceleration component for the accelerometer measurement in the X-Axis in the frequency domain.
-  -   - Units: 1/(meters/sec/sec)
+  - Units: 1/(meters/sec/sec)
 1. freqbodyaccmeany       : num  -0.86707 -0.94408 -0.97707 0.08971 0.00155 ...
   - Mean of the body acceleration component for the accelerometer measurement in the Y-Axis in the frequency domain.
   - Units: 1/(meters/sec/sec)
@@ -84,10 +91,13 @@
   - Units: 1/(meters/sec/sec)
 1. freqbodygyromeanx      : num  -0.85 -0.976 -0.986 -0.339 -0.352 ...
   - Mean of the body angular velocity for the gyro measurement in the X-Axis in the frequency domain.
+  - Units: 1/(rad/sec)
 1. freqbodygyromeany      : num  -0.9522 -0.9758 -0.989 -0.1031 -0.0557 ...
   - Mean of the body angular velocity for the gyro measurement in the Y-Axis in the frequency domain.
+  - Units: 1/(rad/sec)
 1. freqbodygyromeanz      : num  -0.9093 -0.9513 -0.9808 -0.2559 -0.0319 ...
   - Mean of the body angular velocity for the gyro measurement in the Z-Axis in the frequency domain.
+  - Units: 1/(rad/sec)
 1. freqbodyaccmagmean     : num  -0.8618 -0.9478 -0.9854 -0.1286 0.0966 ...
   - Derived quantity (mean) from the "body acceleration jerk" component which in turn is the body acceleration component of the accelerometer measurement in the frequency domain.
   - Units: 1/(meters/sec/sec)
@@ -96,8 +106,10 @@
   - Units: 1/(meters/sec/sec)
 1. freqbodygyromagmean    : num  -0.862 -0.958 -0.985 -0.199 -0.186 ...
   - Derived quantity (mean) from the "body gyro jerk mean" which in turn is the angular velocity component of the gyro measurement in the frequency domain.
+  - Units: 1/(rad/sec)
 1. freqbodygyrojerkmagmean: num  -0.942 -0.99 -0.995 -0.319 -0.282 ...
   - Derived quantity (mean) from the "body gyro jerk mean" which in turn is the angular velocity component of the gyro measurement in the frequency domain.
+  - Units: 1/(rad/sec)
 1. timebodyaccstdx        : num  -0.928 -0.977 -0.996 -0.284 0.03 ...
   - Standard Deviation of the body acceleration component for the accelerometer measurement in the X-Axis in the time domain.
   - Units: meters/sec/sec
@@ -169,10 +181,13 @@
   - Units: 1/(meters/sec/sec)
 1. freqbodygyrostdx       : num  -0.882 -0.978 -0.987 -0.517 -0.495 ...
   - Standard Deviation of the body angular velocity for the gyro measurement in the X-Axis in the frequency domain.
+  - Units: 1/(rad/sec)
 1. freqbodygyrostdy       : num  -0.9512 -0.9623 -0.9871 -0.0335 -0.1814 ...
   - Standard Deviation of the body angular velocity for the gyro measurement in the Y-Axis in the frequency domain.
+  - Units: 1/(rad/sec)
 1. freqbodygyrostdz       : num  -0.917 -0.944 -0.982 -0.437 -0.238 ...
   - Standard Deviation of the body angular velocity for the gyro measurement in the Z-Axis in the frequency domain.
+  - Units: 1/(rad/sec)
 1. freqbodyaccmagstd      : num  -0.798 -0.928 -0.982 -0.398 -0.187 ...
   - Derived quantity (Standard Deviation) from the "body acceleration jerk" component which in turn is the body acceleration component of the accelerometer measurement in the frequency domain.
   - Units: 1/(meters/sec/sec)
@@ -181,6 +196,8 @@
   - Units: 1/(meters/sec/sec)
 1. freqbodygyromagstd     : num  -0.824 -0.932 -0.978 -0.321 -0.398 ...
   - Derived quantity (Standard Deviation) from the "body gyro jerk mean" which in turn is the angular velocity component of the gyro measurement in the frequency domain.
+  - Units: 1/(rad/sec)
 1. freqbodygyrojerkmagstd : num  -0.933 -0.987 -0.995 -0.382 -0.392 ...
   - Derived quantity (Standard Deviation) from the "body gyro jerk mean" which in turn is the angular velocity component of the gyro measurement in the frequency domain.
+  - Units: 1/(rad/sec)
 
